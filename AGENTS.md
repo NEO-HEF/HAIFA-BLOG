@@ -20,3 +20,11 @@
 - Pak teprve následuje věcná část typu `Co se stalo`.
 - Ve veřejných článcích nezmiňuj interní techniku normalizace autorů ani podobné pomocné poznámky pro analytickou práci.
 - Když vytváříš nové public-facing články, chovej se spíš jako reportér vysvětlující význam dění než jako archivář commitů.
+
+## Git remotes
+
+- Tento blog se udržuje synchronně na dvou remotech:
+  - `origin` = Azure DevOps
+  - `github` = GitHub
+- Pokud uživatel řekne jen `pushni to`, znamená to pushnout na oba remotes.
+- Pokud má jít push jen na jeden remote, musí to být řečeno explicitně.
