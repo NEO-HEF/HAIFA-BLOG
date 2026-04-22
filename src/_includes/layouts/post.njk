@@ -27,7 +27,7 @@ layout: layouts/base.njk
   {% if siblings.newer or siblings.older %}
   <nav class="post-nav" aria-label="Navigace mezi články">
     {% if siblings.newer %}
-    <a class="post-nav-link is-newer" href="{{ siblings.newer.url }}">
+    <a class="post-nav-link is-newer" href="{{ siblings.newer.url | url }}">
       <span class="post-nav-label">Novější článek</span>
       <span class="post-nav-title">{{ siblings.newer.data.title }}</span>
     </a>
@@ -36,7 +36,7 @@ layout: layouts/base.njk
     {% endif %}
 
     {% if siblings.older %}
-    <a class="post-nav-link is-older" href="{{ siblings.older.url }}">
+    <a class="post-nav-link is-older" href="{{ siblings.older.url | url }}">
       <span class="post-nav-label">Starší článek</span>
       <span class="post-nav-title">{{ siblings.older.data.title }}</span>
     </a>

@@ -1,6 +1,34 @@
 module.exports = function (eleventyConfig) {
+  const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
+
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
+
+  eleventyConfig.addFilter("url", (value) => {
+    if (!value) {
+      return pathPrefix;
+    }
+
+    const stringValue = String(value);
+
+    if (
+      stringValue.startsWith("http://") ||
+      stringValue.startsWith("https://") ||
+      stringValue.startsWith("mailto:") ||
+      stringValue.startsWith("#")
+    ) {
+      return stringValue;
+    }
+
+    const normalizedPrefix = pathPrefix === "/" ? "/" : `/${pathPrefix.replace(/^\/+|\/+$/g, "")}/`;
+    const normalizedPath = stringValue.startsWith("/") ? stringValue.slice(1) : stringValue;
+
+    if (normalizedPrefix === "/") {
+      return `/${normalizedPath}`.replace(/\/+/g, "/");
+    }
+
+    return `${normalizedPrefix}${normalizedPath}`.replace(/\/+/g, "/");
+  });
 
   eleventyConfig.addFilter("humanDate", (value) => {
     const date = value instanceof Date ? value : new Date(value);
@@ -45,6 +73,6 @@ module.exports = function (eleventyConfig) {
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/",
+    pathPrefix,
   };
 };
