@@ -28,6 +28,7 @@ body {
     linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
   font-family: "Source Serif 4", Georgia, serif;
   line-height: 1.72;
+  min-height: 100dvh;
 }
 
 a {
@@ -48,7 +49,11 @@ img {
 .page-shell {
   width: min(var(--max-page), calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  min-height: 100dvh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .site-header {
@@ -372,6 +377,7 @@ img {
     width: min(100% - 1.25rem, var(--max-page));
     padding-top: 1.25rem;
     padding-bottom: 2.75rem;
+    justify-content: flex-start;
   }
 
   .site-header {
