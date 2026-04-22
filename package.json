@@ -1,0 +1,21 @@
+{
+  "name": "haifa_blog",
+  "version": "1.0.0",
+  "description": "HAIFA - Helios AI Factory. Staticky publikovany blog na Eleventy pro reporty o projektu NEO_HEF.",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://asolcz.visualstudio.com/NEO_HEF/_git/HAIFA_BLOG"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

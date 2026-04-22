@@ -1,20 +1,57 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# HAIFA - Helios AI Factory
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+HAIFA - Helios AI Factory je jednoduchý statický blog postavený na `Eleventy (11ty)`. Obsah se píše jako markdown soubory a build generuje hotový statický web do `_site/`.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Proč tahle platforma
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Vybral jsem `Eleventy`, protože:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- je markdown-first a nepotřebuje CMS,
+- nevynucuje složitou strukturu blogu,
+- běží lokálně přes `node` a `npm`, které už jsou na stroji,
+- build je rychlý a výstup je čistě statický.
+
+## Kde co je
+
+- `src/posts/` obsahuje blogové články v markdownu
+- `src/_includes/layouts/` obsahuje layouty
+- `src/assets/site.css` obsahuje styly
+- `_site/` je vygenerovaný výstup
+- `.cache/NEO_HEF.git` je lokální mirror analyzovaného repozitáře
+- `AGENTS.md` obsahuje lokální pravidla a poznámky pro další práci s historií repozitáře
+- `PROMPT_tydenni_souhrn.md` je připravený prompt pro vytvoření dalšího týdenního článku
+
+## Práce s blogem
+
+```powershell
+npm install
+npm run build
+npm run serve
+```
+
+Po spuštění `npm run serve` Eleventy lokálně vystaví web a sleduje změny ve zdrojích.
+
+## Jak přidat další článek
+
+Přidej další markdown soubor do `src/posts/` s front matter blokem, např.:
+
+```md
+---
+title: "Název článku"
+date: 2026-04-22
+tags:
+  - post
+layout: layouts/post.njk
+summary: "Krátký perex."
+---
+Text článku.
+```
+
+## Aktuální obsah
+
+Blog teď obsahuje:
+
+- souhrnný článek `Ohlédnutí do historie`, který odkazuje na samostatné týdenní rozpadové posty,
+- samostatné posty pro prvních sedm týdnů projektu,
+- několik vysvětlujících článků o kontextu, architektuře a směru projektu `NEO_HEF`,
+- jednoduchou strukturu vhodnou pro další AI-generované články.

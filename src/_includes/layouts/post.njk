@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+---
+{% set siblings = collections.post | adjacentPosts(page.url) %}
+<article class="post">
+  <header class="post-header">
+    <p class="post-home-link"><a href="{{ '/' | url }}">Přehled článků</a></p>
+    {% if week %}
+    <p class="eyebrow">{{ week | isoWeekLabel }}</p>
+    {% endif %}
+    <h1>{{ title }}</h1>
+    <div class="post-meta">
+      <p>{{ date | humanDate }}</p>
+      {% if period %}
+      <p>{{ period }}</p>
+      {% endif %}
+    </div>
+    {% if summary %}
+    <p class="post-summary">{{ summary }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  {% if siblings.newer or siblings.older %}
+  <nav class="post-nav" aria-label="Navigace mezi články">
+    {% if siblings.newer %}
+    <a class="post-nav-link is-newer" href="{{ siblings.newer.url }}">
+      <span class="post-nav-label">Novější článek</span>
+      <span class="post-nav-title">{{ siblings.newer.data.title }}</span>
+    </a>
+    {% else %}
+    <span class="post-nav-spacer"></span>
+    {% endif %}
+
+    {% if siblings.older %}
+    <a class="post-nav-link is-older" href="{{ siblings.older.url }}">
+      <span class="post-nav-label">Starší článek</span>
+      <span class="post-nav-title">{{ siblings.older.data.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</article>
