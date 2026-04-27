@@ -12,7 +12,7 @@ module.exports = function (eleventyConfig) {
       switchLabel: "Jazyk",
     },
     en: {
-      articles: "Article Overview",
+      articles: "All Articles",
       newerPost: "Newer Article",
       olderPost: "Older Article",
       postNavigation: "Article navigation",
