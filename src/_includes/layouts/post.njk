@@ -2,22 +2,11 @@
 layout: layouts/base.njk
 ---
 {% set currentLang = lang or "cs" %}
-{% set otherLang = currentLang | otherLang %}
-{% set translatedPost = collections.post | translation(translationKey, otherLang) %}
 {% set sameLanguagePosts = collections.post | postsByLang(currentLang) %}
 {% set siblings = sameLanguagePosts | adjacentPosts(page.url) %}
 <article class="post">
   <header class="post-header">
     <p class="post-home-link"><a href="{{ currentLang | homeUrl | url }}">{{ "articles" | t(currentLang) }}</a></p>
-    {% if translatedPost %}
-    <p class="post-language-link">
-      {% if otherLang == "en" %}
-      <a href="{{ translatedPost.url | url }}">Read in English</a>
-      {% else %}
-      <a href="{{ translatedPost.url | url }}">Číst česky</a>
-      {% endif %}
-    </p>
-    {% endif %}
     {% if week %}
     <p class="eyebrow">{{ week | isoWeekLabel }}</p>
     {% endif %}

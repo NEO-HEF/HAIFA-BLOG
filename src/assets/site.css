@@ -77,7 +77,6 @@ img {
 .post-meta,
 .post-card-meta,
 .post-home-link,
-.post-language-link,
 .section-head p,
 .lead-label {
   font-family: "Manrope", "Segoe UI", sans-serif;
@@ -222,15 +221,6 @@ img {
 
 .post-home-link a {
   text-decoration: none;
-}
-
-.post-language-link {
-  margin: -0.35rem 0 0.85rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .eyebrow {
