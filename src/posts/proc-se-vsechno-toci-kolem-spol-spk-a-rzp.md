@@ -7,6 +7,8 @@ tags:
   - neo-hef
   - moduly
 layout: layouts/post.njk
+lang: cs
+translationKey: proc-se-vsechno-toci-kolem-spol-spk-a-rzp
 summary: "Kdo sleduje dokumentaci NEO_HEF, naráží stále na SPOL, SPK a RZP. Není to náhoda: právě tady se rozhoduje, jestli se migrace rozjede bezpečně a v dobrém pořadí."
 ---
 ## Shrnutí pro netechnické čtenáře

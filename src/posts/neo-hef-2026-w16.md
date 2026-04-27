@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w16
 summary: "Projekt se posouvá z analýzy do realizace: vzniká implementační plán, přibývají spustitelné části a tým si ověřuje, že cesta jde převést do praxe."
 ---
 ## Shrnutí pro netechnické čtenáře

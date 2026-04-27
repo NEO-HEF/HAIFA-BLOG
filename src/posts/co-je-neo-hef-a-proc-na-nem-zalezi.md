@@ -7,6 +7,8 @@ tags:
   - neo-hef
   - vysvetleni
 layout: layouts/post.njk
+lang: cs
+translationKey: co-je-neo-hef-a-proc-na-nem-zalezi
 summary: "NEO_HEF není vývoj nové aplikace, ale technologická obnova kritického ERP systému, který dnes používají zhruba dva tisíce organizací veřejné správy."
 ---
 ## Shrnutí pro netechnické čtenáře

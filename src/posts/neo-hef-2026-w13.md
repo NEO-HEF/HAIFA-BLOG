@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w13
 summary: "Po importu přišlo zpevnění projektu: dokumentace se uklidila, znalosti se začaly strukturovat a práce dostala jasnější rámec."
 ---
 ## Shrnutí pro netechnické čtenáře

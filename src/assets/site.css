@@ -72,10 +72,12 @@ img {
 
 .site-brand,
 .site-tagline,
+.language-switch,
 .eyebrow,
 .post-meta,
 .post-card-meta,
 .post-home-link,
+.post-language-link,
 .section-head p,
 .lead-label {
   font-family: "Manrope", "Segoe UI", sans-serif;
@@ -94,6 +96,25 @@ img {
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 500;
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 0.65rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.language-switch span,
+.language-switch a {
+  text-decoration: none;
+}
+
+.language-switch span {
+  color: var(--ink);
 }
 
 .site-main {
@@ -201,6 +222,15 @@ img {
 
 .post-home-link a {
   text-decoration: none;
+}
+
+.post-language-link {
+  margin: -0.35rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .eyebrow {

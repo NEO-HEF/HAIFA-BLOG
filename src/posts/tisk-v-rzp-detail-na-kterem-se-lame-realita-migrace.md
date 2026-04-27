@@ -8,6 +8,8 @@ tags:
   - rzp
   - tisk
 layout: layouts/post.njk
+lang: cs
+translationKey: tisk-v-rzp-detail-na-kterem-se-lame-realita-migrace
 summary: "Migrace tiskových výstupů v RZP ukazuje, proč NEO_HEF není jen mechanický přepis formulářů. I jeden reportovací tok může být samostatný technický projekt."
 ---
 ## Shrnutí pro netechnické čtenáře

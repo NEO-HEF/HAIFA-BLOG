@@ -7,6 +7,8 @@ tags:
   - neo-hef
   - architektura
 layout: layouts/post.njk
+lang: cs
+translationKey: jak-se-migruje-erp-bez-velkeho-tresku
 summary: "NEO_HEF nestaví nový systém vedle starého. Sází na řízenou migraci po modulech, souběžný provoz a přísně opakovatelný pětifázový postup."
 ---
 ## Shrnutí pro netechnické čtenáře

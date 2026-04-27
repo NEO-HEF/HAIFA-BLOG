@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w17
 summary: "Projekt už nevypadá jen jako analýza a plány: přibývá sdílená infrastruktura, první části SPOL/SPK, RZP integrace, přihlašování, audit i reportovací vrstva."
 ---
 ## Shrnutí pro netechnické čtenáře
