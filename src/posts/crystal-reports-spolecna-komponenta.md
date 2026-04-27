@@ -9,6 +9,8 @@ tags:
   - tisk
   - crystal-reports
 layout: layouts/post.njk
+lang: cs
+translationKey: crystal-reports-spolecna-komponenta
 summary: "NEO_HEF má připravenou společnou komponentu pro Crystal Reports. První podporovaný režim řeší sestavy nad lokální MDB databází a ukazuje funkční cestu přes oddělený ReportGenerator."
 ---
 ## Shrnutí pro netechnické čtenáře

@@ -6,6 +6,8 @@ tags:
   - neo-hef
   - historie
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-tydenni-souhrn
 summary: "Přehled prvních sedmi týdnů projektu: od založení pracovního základu až po první výraznou implementační vlnu."
 ---
 ## Shrnutí pro netechnické čtenáře

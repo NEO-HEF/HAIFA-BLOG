@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w12
 summary: "Tým výrazně rozšířil pokrytí systému v repozitáři a založil i referenční stopu původního stavu, takže další práce má pevnější oporu."
 ---
 ## Shrnutí pro netechnické čtenáře

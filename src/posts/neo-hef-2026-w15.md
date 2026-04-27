@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w15
 summary: "Tým se dostává k podrobnějšímu porozumění systému: zpřesňuje analýzu, rozpracovává plán a ověřuje si kritické části na prvních PoC."
 ---
 ## Shrnutí pro netechnické čtenáře

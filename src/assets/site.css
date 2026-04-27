@@ -72,6 +72,7 @@ img {
 
 .site-brand,
 .site-tagline,
+.language-switch,
 .eyebrow,
 .post-meta,
 .post-card-meta,
@@ -94,6 +95,25 @@ img {
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 500;
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 0.65rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.language-switch span,
+.language-switch a {
+  text-decoration: none;
+}
+
+.language-switch span {
+  color: var(--ink);
 }
 
 .site-main {
