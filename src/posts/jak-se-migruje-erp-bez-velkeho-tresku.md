@@ -1,6 +1,6 @@
 ---
 title: "Jak se migruje ERP bez velkého třesku"
-date: 2026-04-19
+date: 2026-03-10T12:00:00
 tags:
   - post
   - haifa

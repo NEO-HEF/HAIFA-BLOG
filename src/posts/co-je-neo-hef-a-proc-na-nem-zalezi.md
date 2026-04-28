@@ -1,6 +1,6 @@
 ---
 title: "Co je NEO_HEF a proč na něm záleží"
-date: 2026-04-18
+date: 2026-03-10T11:00:00
 tags:
   - post
   - haifa

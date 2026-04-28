@@ -72,6 +72,7 @@ img {
 
 .site-brand,
 .site-tagline,
+.site-footer,
 .language-switch,
 .eyebrow,
 .post-meta,
@@ -119,6 +120,23 @@ img {
 .site-main {
   display: grid;
   gap: 2.5rem;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  text-decoration-color: rgba(17, 17, 17, 0.22);
 }
 
 .section-head {

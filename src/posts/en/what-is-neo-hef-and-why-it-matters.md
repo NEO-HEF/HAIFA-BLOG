@@ -1,6 +1,6 @@
 ---
 title: "What NEO_HEF Is and Why It Matters"
-date: 2026-04-18
+date: 2026-03-10T11:00:00
 tags:
   - post
   - haifa

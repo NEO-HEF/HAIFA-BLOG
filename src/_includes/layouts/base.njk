@@ -34,6 +34,13 @@
       <main class="site-main">
         {{ content | safe }}
       </main>
+
+      <footer class="site-footer">
+        <p>
+          {% if currentLang == "en" %}Blog author{% else %}Autor blogu{% endif %}:
+          <a href="mailto:jan.krejci@assecosol.com">jan.krejci@assecosol.com</a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>
