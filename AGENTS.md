@@ -12,6 +12,13 @@
 - Tenhle soubor je hlavní rozcestník do projektové dokumentace a dává přesnou terminologii, scope, architekturu, implementační plány i hotové výsledky.
 - Pro veřejné články o `HAIFA` a `NEO_HEF` stavěj texty primárně na oficiálních artefaktech z `docs/`, ne jen na názvech commitů.
 
+## Terminologie: Launcher vs. Fenix
+
+- **Launcher** (Společný spouštěč / `SpolecnySpoustec`) **není** totéž co Fenix. Launcher je obal (shell), do kterého se Fenix moduly vkládají. Díky launcheru se moduly zobrazují v jednom okně na záložkách a Fenix pak vypadá jako jeden systém, ne jako sada samostatných aplikací.
+- **Duální spouštění** je vlastnost všech modulů i jejich původních legacy verzí: uživatel si může vybrat, jestli spustí modul samostatně, nebo pod launcherem.
+- Při spuštění pod launcherem se mimo jiné nastaví **named pipes** komunikace, aby launcher věděl, jestli je modul spuštěn, a uměl ho také vypnout.
+- Ve článcích nikdy nezaměňuj Launcher za Fenix. Fenix = celý ERP systém; Launcher = jeho společný spouštěč.
+
 ## Redakční pravidla blogu
 
 - Blog je o `HAIFA` a `NEO_HEF`; tón má být věcný, profesionální a srozumitelný pro laickou i odbornou veřejnost.

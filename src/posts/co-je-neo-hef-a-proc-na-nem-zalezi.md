@@ -1,12 +1,14 @@
 ---
 title: "Co je NEO_HEF a proč na něm záleží"
-date: 2026-04-18
+date: 2026-03-10T11:00:00
 tags:
   - post
   - haifa
   - neo-hef
   - vysvetleni
 layout: layouts/post.njk
+lang: cs
+translationKey: co-je-neo-hef-a-proc-na-nem-zalezi
 summary: "NEO_HEF není vývoj nové aplikace, ale technologická obnova kritického ERP systému, který dnes používají zhruba dva tisíce organizací veřejné správy."
 ---
 ## Shrnutí pro netechnické čtenáře

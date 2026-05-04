@@ -1,5 +1,29 @@
 module.exports = function (eleventyConfig) {
   const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
+  const labels = {
+    cs: {
+      articles: "Přehled článků",
+      newerPost: "Novější článek",
+      olderPost: "Starší článek",
+      postNavigation: "Navigace mezi články",
+      siteDescription: "Průběžné reporty o tom, co se v projektu děje, kam se práce posouvá a co z toho plyne pro další postup.",
+      siteSubtitle: "Aktuální zprávy z bojiště pro ty, koho to zajímá.",
+      siteTitle: "HAIFA - Helios AI Factory",
+      switchLabel: "Jazyk",
+    },
+    en: {
+      articles: "All Articles",
+      newerPost: "Newer Article",
+      olderPost: "Older Article",
+      postNavigation: "Article navigation",
+      siteDescription: "Ongoing reports on what is happening in the project, where the work is moving, and what it means for the next steps.",
+      siteSubtitle: "Current field notes for people who want to follow the work.",
+      siteTitle: "HAIFA - Helios AI Factory",
+      switchLabel: "Language",
+    },
+  };
+
+  const getLang = (data) => data?.lang || "cs";
 
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
@@ -30,10 +54,11 @@ module.exports = function (eleventyConfig) {
     return `${normalizedPrefix}${normalizedPath}`.replace(/\/+/g, "/");
   });
 
-  eleventyConfig.addFilter("humanDate", (value) => {
+  eleventyConfig.addFilter("humanDate", (value, lang = "cs") => {
     const date = value instanceof Date ? value : new Date(value);
+    const locale = lang === "en" ? "en-US" : "cs-CZ";
 
-    return new Intl.DateTimeFormat("cs-CZ", {
+    return new Intl.DateTimeFormat(locale, {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -46,6 +71,28 @@ module.exports = function (eleventyConfig) {
     }
 
     return String(value).toUpperCase();
+  });
+
+  eleventyConfig.addFilter("homeUrl", (lang = "cs") => (lang === "en" ? "/en/" : "/"));
+
+  eleventyConfig.addFilter("otherLang", (lang = "cs") => (lang === "en" ? "cs" : "en"));
+
+  eleventyConfig.addFilter("postsByLang", (collection, lang = "cs") => {
+    if (!Array.isArray(collection)) {
+      return [];
+    }
+
+    return collection.filter((item) => getLang(item.data) === lang);
+  });
+
+  eleventyConfig.addFilter("t", (key, lang = "cs") => labels[lang]?.[key] || labels.cs[key] || key);
+
+  eleventyConfig.addFilter("translation", (collection, translationKey, lang = "cs") => {
+    if (!Array.isArray(collection) || !translationKey) {
+      return null;
+    }
+
+    return collection.find((item) => item.data.translationKey === translationKey && getLang(item.data) === lang) || null;
   });
 
   eleventyConfig.addFilter("adjacentPosts", (collection, currentUrl) => {

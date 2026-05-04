@@ -1,16 +1,18 @@
 ---
 layout: layouts/base.njk
 ---
-{% set siblings = collections.post | adjacentPosts(page.url) %}
+{% set currentLang = lang or "cs" %}
+{% set sameLanguagePosts = collections.post | postsByLang(currentLang) %}
+{% set siblings = sameLanguagePosts | adjacentPosts(page.url) %}
 <article class="post">
   <header class="post-header">
-    <p class="post-home-link"><a href="{{ '/' | url }}">Přehled článků</a></p>
+    <p class="post-home-link"><a href="{{ currentLang | homeUrl | url }}">{{ "articles" | t(currentLang) }}</a></p>
     {% if week %}
     <p class="eyebrow">{{ week | isoWeekLabel }}</p>
     {% endif %}
     <h1>{{ title }}</h1>
     <div class="post-meta">
-      <p>{{ date | humanDate }}</p>
+      <p>{{ date | humanDate(currentLang) }}</p>
       {% if period %}
       <p>{{ period }}</p>
       {% endif %}
@@ -25,10 +27,10 @@ layout: layouts/base.njk
   </div>
 
   {% if siblings.newer or siblings.older %}
-  <nav class="post-nav" aria-label="Navigace mezi články">
+  <nav class="post-nav" aria-label="{{ "postNavigation" | t(currentLang) }}">
     {% if siblings.newer %}
     <a class="post-nav-link is-newer" href="{{ siblings.newer.url | url }}">
-      <span class="post-nav-label">Novější článek</span>
+      <span class="post-nav-label">{{ "newerPost" | t(currentLang) }}</span>
       <span class="post-nav-title">{{ siblings.newer.data.title }}</span>
     </a>
     {% else %}
@@ -37,7 +39,7 @@ layout: layouts/base.njk
 
     {% if siblings.older %}
     <a class="post-nav-link is-older" href="{{ siblings.older.url | url }}">
-      <span class="post-nav-label">Starší článek</span>
+      <span class="post-nav-label">{{ "olderPost" | t(currentLang) }}</span>
       <span class="post-nav-title">{{ siblings.older.data.title }}</span>
     </a>
     {% endif %}

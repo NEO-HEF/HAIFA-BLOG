@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w14
 summary: "Projekt se posouvá z pouhého sběru podkladů do skutečné analytické fáze: vznikají první migrační materiály, tooling a cílené rozbory."
 ---
 ## Shrnutí pro netechnické čtenáře

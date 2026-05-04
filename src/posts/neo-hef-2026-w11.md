@@ -9,6 +9,8 @@ tags:
   - historie
   - tyden
 layout: layouts/post.njk
+lang: cs
+translationKey: neo-hef-2026-w11
 summary: "Projekt se reálně rozběhl: tým dostal do repozitáře první velké části původního systému a připravil technický základ pro další migraci."
 ---
 ## Shrnutí pro netechnické čtenáře
