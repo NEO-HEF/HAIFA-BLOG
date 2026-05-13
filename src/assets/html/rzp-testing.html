@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<title>RZP Full QA — 2026-05-12 16:57:00</title>
+<style>
+:root { --bg:#fafbfc; --card:#fff; --line:#e2e6ea; --ok:#1b7e3a; --warn:#b8841a; --err:#b3261e; --muted:#6c757d; --accent:#0b5cad; --accent-soft:#e7f0fb; }
+body { font-family: Segoe UI, Tahoma, sans-serif; background: var(--bg); color: #1d1f21; margin: 0; padding: 24px; line-height: 1.45; }
+h1 { margin: 0 0 4px 0; font-size: 26px; }
+h2 { margin: 32px 0 12px 0; font-size: 20px; border-bottom: 2px solid var(--accent); padding-bottom: 4px; color: var(--accent); }
+.subtitle { color: var(--muted); margin-bottom: 24px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 12px; margin: 8px 0 16px; }
+.kpi { background: var(--accent-soft); border-radius: 8px; padding: 14px 16px; border-left: 4px solid var(--accent); }
+.kpi .num { font-size: 28px; font-weight: 600; line-height: 1; }
+.kpi .lbl { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 6px; }
+.kpi.ok { border-color: var(--ok); background: #e8f5ec; }
+.kpi.warn { border-color: var(--warn); background: #fdf4e0; }
+.kpi.err { border-color: var(--err); background: #fbeae9; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 13px; }
+th, td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: #f1f3f5; font-weight: 600; }
+tr:nth-child(even) td { background: #fafbfc; }
+.ok { color: var(--ok); font-weight: 600; }
+.warn { color: var(--warn); font-weight: 600; }
+.err { color: var(--err); font-weight: 600; }
+.muted { color: var(--muted); }
+.mono { font-family: Consolas, monospace; font-size: 12.5px; }
+pre { background: #272822; color: #f8f8f2; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 12px; }
+.bar { height: 18px; background: #e9ecef; border-radius: 9px; overflow: hidden; display: flex; margin: 8px 0; }
+.bar > span { display: block; height: 100%; }
+.b-ok { background: var(--ok); }
+.b-warn { background: var(--warn); }
+.b-err { background: var(--err); }
+.note { background: #fff4d6; border-left: 4px solid var(--warn); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; }
+.ok-box { background: #e8f5ec; border-left: 4px solid var(--ok); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<h1>RZP Full QA — automatický běh</h1>
+<div class="subtitle">
+  Vygenerováno: <strong>2026-05-12 16:57:00</strong> &middot;
+  Limit scaffoldů v tomto běhu: <strong>0</strong> &middot;
+  Skript: <span class="mono">scripts/testing/run-rzp-full-qa-auto.ps1</span>
+</div>
+
+<h2>1. Souhrn</h2>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="num">33</div><div class="lbl">E2E scénářů v katalogu</div></div>
+  <div class="kpi ok"><div class="num">13</div><div class="lbl">Implementováno (39.4&nbsp;%)</div></div>
+  <div class="kpi warn"><div class="num">19</div><div class="lbl">Skeleton (čeká impl.)</div></div>
+  <div class="kpi err"><div class="num">1</div><div class="lbl">Chybí</div></div>
+  <div class="kpi"><div class="num">0</div><div class="lbl">Nově vygenerováno (tento běh)</div></div>
+</div>
+
+<div class="bar" title="Pokrytí E2E katalogu">
+  <span class="b-ok" style="width: 39.3939393939394%"></span>
+  <span class="b-warn" style="width: 57.5757575757576%"></span>
+  <span class="b-err" style="width: 3.03030303030303%"></span>
+</div>
+
+<h2>2. Výsledky testů</h2>
+
+<div class="card">
+  <h3>Fenix.RZP.Tests (unit + integration)</h3>
+  <table>
+    <tr><th>Total</th><th>Úspěšné</th><th>Selhání</th><th>Přeskočené</th></tr>
+    <tr><td>-</td><td class="ok">-</td><td class="err">-</td><td class="warn">-</td></tr>
+  </table>
+  <p class="muted">TRX: <span class="mono">C:\Users\iva.holeckova\pro_testy\NEO_HEF_ostre\NEO_HEF\src\modules\RZP\Fenix.RZP.Tests\TestResults\RZP-FULL-Unit-20260512-165700.trx</span></p>
+</div>
+
+<div class="card">
+  <h3>Fenix.RZP.E2E.Tests</h3>
+  <table>
+    <tr><th>Total</th><th>Úspěšné</th><th>Selhání</th><th>Přeskočené (skeleton)</th></tr>
+    <tr><td>32</td><td class="ok">13</td><td class="err">0</td><td class="warn">19</td></tr>
+  </table>
+  <p class="muted">TRX: <span class="mono">C:\Users\iva.holeckova\pro_testy\NEO_HEF_ostre\NEO_HEF\src\modules\RZP\Fenix.RZP.E2E.Tests\TestResults\RZP-FULL-E2E-20260512-165700.trx</span></p>
+  <table>
+    <tr><th>Test</th><th>Stav</th><th>Trvání</th></tr>
+    <tr><td class='mono'>CreateDetail_S1_TS003_New501_Saves</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:04.8534084</td></tr>
+<tr><td class='mono'>YearSelection_Cancel_RetainsPreviousYear</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>DefinitionCodebook_OpenAndListDefinitions</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>OwnerSelection_EscKey_ClosesDialogLikeCancel</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CodelistDialog_SU_OpensAndLoadsRows</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S2_TS005_5XX_IsSupersetOf55X_ShowsError</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>OwnerMaintenance_CreateNewOwner_AppearsInList</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>Search_FilterByName_ReturnsMatchingRows</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>YearSelection_DefaultCurrentYear_ConfirmedWithOk</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS002_AllVAccounts_6XX_Saves</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:06.0007368</td></tr>
+<tr><td class='mono'>OwnerMaintenance_OpenSelectedOwnerForEdit</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CodelistDialog_SUAU_ShowsTwoKeyLayout</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateNew_TS003_Record3_DuplicateNazev_SavesAndOpensDetail</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:04.4955412</td></tr>
+<tr><td class='mono'>Settings_OpenAndSaveLegacyDefaults</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateNew_TS004_MissingPorCislo_ShowsValidationError</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:04.7285546</td></tr>
+<tr><td class='mono'>OwnerSelection_ByIco_0044268050_PullsBata_AndShellShowsMenuOfSevenItems</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:07.3322910</td></tr>
+<tr><td class='mono'>OwnerSelection_Cancel_ReturnsCancelAndEmptyOutput</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS001_AllNAccounts_5XX_Saves</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:04.4857122</td></tr>
+<tr><td class='mono'>CreateNew_TS001_Record1_NakladyAVynosy2026_SavesAndOpensDetail</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:06.0803762</td></tr>
+<tr><td class='mono'>OwnerSelection_FirstIco_ConfirmedWithOk_WritesIcoToOutputFile</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:04.2884395</td></tr>
+<tr><td class='mono'>CreateDetail_S2_TS003_661_IsSubsetOf66X_ShowsError</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS005_Duplicate5XX_ShowsError</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:03.8998411</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS004_New601_Saves</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:05.6764308</td></tr>
+<tr><td class='mono'>CreateNew_TS002_Record2_NV2026_SavesAndOpensDetail</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:05.6897528</td></tr>
+<tr><td class='mono'>CreateDetail_S2_TS002_NewSet_66X_V_Saves</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S2_TS004_New123_N_Saves</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS006_Duplicate501_ShowsError</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:07.6399456</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS008_MissingNaklVyn_ShowsError</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S2_TS001_NewSet_55X_N_Saves</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CodelistDialog_UZ_OpensAndLoadsRows</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateDetail_S1_TS007_New62X_Saves</td><td class='warn'>Přeskočeno</td><td class='mono'>00:00:00.0010000</td></tr>
+<tr><td class='mono'>CreateNew_TS005_InvalidPorCislo_ShowsValidationError</td><td class='ok'>Úspěšné</td><td class='mono'>00:00:07.7826260</td></tr>
+  </table>
+</div>
+
+<h2>3. Pokrytí E2E katalogu</h2>
+
+<table>
+  <tr><th>ID</th><th>Prio</th><th>Form</th><th>Test class</th><th>Popis</th><th>Stav</th><th>Výsledek</th><th>Detail</th></tr>
+  <tr><td>SC-OWN-01</td><td>P0</td><td>VICO</td><td>OwnerSelectionE2ETests</td><td>Smoke - v&#253;běr defaultn&#237;ho majitele a potvrzen&#237; OK</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-OWN-02</td><td>P0</td><td>VICO</td><td>OwnerSelectionE2ETests</td><td>V&#253;běr Baťa (IČ 0044268050) + ověřen&#237; menu v shellu</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-OWN-03</td><td>P1</td><td>VICO</td><td>OwnerSelectionCancelE2ETests</td><td>Cancel dialogu - ž&#225;dn&#225; selekce, v&#253;stupn&#237; soubor pr&#225;zdn&#253;</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-OWN-04</td><td>P1</td><td>VICO</td><td>OwnerSelectionEscapeE2ETests</td><td>Kl&#225;vesa Esc zavře dialog jako Cancel</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-YEAR-01</td><td>P1</td><td>VDAT</td><td>YearSelectionE2ETests</td><td>V&#253;běr aktu&#225;ln&#237;ho roku přes dialog rok</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-YEAR-02</td><td>P1</td><td>VDAT</td><td>YearSelectionCancelE2ETests</td><td>Cancel dialogu rok zachov&#225; původn&#237; hodnotu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-CIS-01</td><td>P1</td><td>CISE</td><td>CodelistSUE2ETests</td><td>Otevřen&#237; č&#237;seln&#237;ku SU z menu a načten&#237; ř&#225;dků</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-CIS-02</td><td>P1</td><td>CISE</td><td>CodelistUZE2ETests</td><td>Otevřen&#237; č&#237;seln&#237;ku UZ z menu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-CIS-03</td><td>P1</td><td>CISE</td><td>CodelistSUAUE2ETests</td><td>Č&#237;seln&#237;k SUAU - dvoukl&#237;čov&#253; layout</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-NAST-01</td><td>P2</td><td>NAST</td><td>SettingsE2ETests</td><td>Otevřen&#237; a uložen&#237; Nastaven&#237; s legacy defaults</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-HLED-01</td><td>P2</td><td>HLED</td><td>SearchE2ETests</td><td>Vyhled&#225;v&#225;n&#237; podle n&#225;zvu majitele</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCEC-01</td><td>P2</td><td>UCEC</td><td>AccountCodebookE2ETests</td><td>Č&#237;seln&#237;k n&#225;kladov&#253;ch/v&#253;nosov&#253;ch &#250;čtů</td><td class='err'>Chybí</td><td class='muted'>—</td><td>Soubor neexistuje, ček&#225; na scaffold.</td></tr>
+<tr><td>SC-ROZD-01</td><td>P2</td><td>ROZD</td><td>DefinitionCodebookE2ETests</td><td>Č&#237;seln&#237;k definičn&#237;ch vět</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-MAJC-01</td><td>P2</td><td>MAJC</td><td>OwnerMaintenanceE2ETests</td><td>&#218;držba majitele - otevřen&#237; vybran&#233;ho k editaci</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-MAJC-02</td><td>P2</td><td>MAJC</td><td>OwnerMaintenanceCreateE2ETests</td><td>Vytvořen&#237; nov&#233;ho majitele přes &#218;držbu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCEC-NEW-01</td><td>P2</td><td>UCEC</td><td>AccountCodebookCreateE2ETests</td><td>TS-001 Pozitivn&#237;: Založen&#237; nov&#233;ho z&#225;znamu poř.č.=1 / &quot;N&#225;klady a v&#253;nosy 2026&quot; / pozn.&quot;test&quot; - ulož&#237; a otevře detail</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCEC-NEW-02</td><td>P2</td><td>UCEC</td><td>AccountCodebookCreateE2ETests</td><td>TS-002 Pozitivn&#237;: Založen&#237; nov&#233;ho z&#225;znamu poř.č.=2 / &quot;N+V 2026&quot; - ulož&#237; a otevře detail</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCEC-NEW-03</td><td>P2</td><td>UCEC</td><td>AccountCodebookCreateE2ETests</td><td>TS-003 Pozitivn&#237;: Založen&#237; nov&#233;ho z&#225;znamu poř.č.=3 / &quot;N+V 2026&quot; (duplicitn&#237; n&#225;zev, unik&#225;tn&#237; poř.č.) - ulož&#237; a otevře detail</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCEC-NEW-04</td><td>P2</td><td>UCEC</td><td>AccountCodebookCreateE2ETests</td><td>TS-004 Negativn&#237;: Nen&#237; vyplněno poř.č. (0) - hl&#225;ška &quot;Nen&#237; zad&#225;no pořadov&#233; č&#237;slo&quot;</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCEC-NEW-05</td><td>P2</td><td>UCEC</td><td>AccountCodebookCreateE2ETests</td><td>TS-005 Negativn&#237;: Špatn&#225; hodnota poř.č. (&quot;xx&quot; non-numeric) - hl&#225;ška &quot;Nen&#237; zad&#225;no pořadov&#233; č&#237;slo&quot;</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-01</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-001 Pozitivn&#237;: Všechny N &#250;čty (wildcard 5XX, N, &quot;n&#225;klad&quot;) - ulož&#237; do gridu</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-02</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-002 Pozitivn&#237;: Všechny V &#250;čty (wildcard 6XX, V) - ulož&#237; do gridu</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-03</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-003 Pozitivn&#237;: Nov&#253; konkr&#233;tn&#237; n&#225;kladov&#253; &#250;čet 501 (N, &quot;test&quot;) - ulož&#237; do gridu</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-04</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-004 Pozitivn&#237;: Nov&#253; konkr&#233;tn&#237; v&#253;nosov&#253; &#250;čet 601 (V) - ulož&#237; do gridu</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-05</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-005 Negativn&#237;: Duplicitn&#237; wildcard 5XX (Equal overlap) - hl&#225;ška &quot;Nelze vložit již existuj&#237;c&#237; z&#225;znam&quot;</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-06</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-006 Negativn&#237;: Duplicitn&#237; konkr&#233;tn&#237; 501 (Equal overlap) - hl&#225;ška &quot;Nelze vložit již existuj&#237;c&#237; z&#225;znam&quot;</td><td class='ok'>Implementováno</td><td class='ok'>✓ Prošlo</td><td>Implementov&#225;no a aktivn&#237; v test suite.</td></tr>
+<tr><td>SC-UCED-S1-07</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-007 Pozitivn&#237;: Nov&#253; v&#253;nosov&#253; wildcard 62X (V) - ulož&#237; do gridu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCED-S1-08</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada1 TS-008 Negativn&#237;: Nen&#237; vyplněn N&#225;klad/v&#253;nos (111, pr&#225;zdn&#233; NV) - hl&#225;ška &quot;Nen&#237; zad&#225;no zda se jedn&#225; o n&#225;kladov&#253; či v&#253;nosov&#253; &#250;čet&quot;</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCED-S2-01</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada2 TS-001 Pozitivn&#237;: Založen&#237; množiny 55X (N) - ulož&#237; do gridu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCED-S2-02</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada2 TS-002 Pozitivn&#237;: Založen&#237; množiny 66X (V) - ulož&#237; do gridu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCED-S2-03</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada2 TS-003 Negativn&#237;: &#218;čet 661 je podmnožinou 66X (Subset overlap) - hl&#225;ška &quot;Nelze vložit z&#225;znam &#39;661&#39;, kter&#225; je podmnožinou &#39;66X&#39;&quot;</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCED-S2-04</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada2 TS-004 Pozitivn&#237;: Založen&#237; konkr&#233;tn&#237;ho &#250;čtu 123 (N) - ulož&#237; do gridu</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+<tr><td>SC-UCED-S2-05</td><td>P2</td><td>UCED</td><td>AccountDetailCreateE2ETests</td><td>Sada2 TS-005 Negativn&#237;: &#218;čet 5XX je nadmnožinou 55X (Superset overlap) - hl&#225;ška &quot;Nelze vložit z&#225;znam &#39;5XX&#39;, kter&#253; je nadmnožinou &#39;55X&#39;&quot;</td><td class='warn'>Skeleton</td><td class='warn'>− Přeskočeno</td><td>Skeleton existuje, ček&#225; na implementaci (Skip atribut).</td></tr>
+</table>
+
+<h2>4. Nově vygenerované skeletony (tento běh)</h2>
+
+<div class="card">
+  <ul>
+    <li class='muted'>V tomto běhu nebyl vygenerován žádný nový skeleton.</li>
+  </ul>
+  <p class="muted">Limit: 0 skeletonů na běh. Idempotentní: již existující soubory se neprepisují.</p>
+</div>
+
+<h2>5. Doporučený další krok</h2>
+
+<div class="note">
+  Stále <strong>1</strong> scénářů nemá ani skeleton. Spusť skript s <span class='mono'>-MaxScaffolds 3</span> (nebo více) k postupnému doplnění.
+</div>
+
+<div class="ok-box">
+  <strong>Pro implementaci skeleton testu:</strong>
+  <ol>
+    <li>Otevři soubor uvedený ve sloupci „Test class" (např. <span class="mono">OwnerSelectionCancelE2ETests.cs</span>).</li>
+    <li>Sleduj implementační poznámky v hlavičce souboru.</li>
+    <li>Přidej host mód do <span class="mono">Fenix.RZP.WinForms/E2E*Runner.cs</span> + dispatch v <span class="mono">Program.cs</span>.</li>
+    <li>Naplň tělo testu (vzor: <span class="mono">OwnerSelectionE2ETests.cs</span>).</li>
+    <li>Odeber atribut <span class="mono">[Fact(Skip="…")]</span> → přepni na <span class="mono">[Fact]</span>.</li>
+    <li>Spusť skript znovu — report se aktualizuje, pokrytí se posune nahoru.</li>
+  </ol>
+</div>
+
+<h2>6. Reprodukovatelnost</h2>
+
+<div class="card">
+  <p>Tento běh:</p>
+  <pre>pwsh -NoProfile -File scripts/testing/run-rzp-full-qa-auto.ps1 -MaxScaffolds 0</pre>
+  <p>Vstupy:</p>
+  <ul>
+    <li>Katalog: <span class="mono">docs/implementation-results/RZP/qa/e2e-catalog.csv</span></li>
+    <li>Template: <span class="mono">scripts/testing/templates/e2e-skeleton.cs.template</span></li>
+    <li>Unit test project: <span class="mono">src/modules/RZP/Fenix.RZP.Tests/Fenix.RZP.Tests.csproj</span></li>
+    <li>E2E test project: <span class="mono">src/modules/RZP/Fenix.RZP.E2E.Tests/Fenix.RZP.E2E.Tests.csproj</span></li>
+  </ul>
+  <p>Bezpečné parametry pro různé situace:</p>
+  <ul>
+    <li><span class="mono">-MaxScaffolds 0</span> — jen report, nic negeneruje</li>
+    <li><span class="mono">-SkipUnitTests</span> — přeskočí unit/integration vrstvu</li>
+    <li><span class="mono">-SkipE2ETests</span> — přeskočí E2E (pokud GUI session není dostupná)</li>
+    <li><span class="mono">-OpenReport</span> — otevře HTML v defaultním prohlížeči</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Automatický QA report pro modul <strong>RZP</strong>. Limit scaffold/run zajišťuje, že běh neexploduje (žádná smyčka).</p>
+  <p>Pro další scénáře přidej řádek do <span class="mono">e2e-catalog.csv</span> a spusť skript znovu.</p>
+</footer>
+
+</body>
+</html>
