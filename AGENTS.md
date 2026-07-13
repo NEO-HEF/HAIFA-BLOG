@@ -8,6 +8,9 @@
 
 ## Kontext pro HAIFA / NEO_HEF
 
+- **HAIFA** znamená **Helios AI Factory** a je to tým / iniciativa pro vytváření procesů AI-driven vývoje softwaru. Cílem je naučit firmu a potenciálně i další firmy ve skupině vyrábět software pomocí AI agentů týmově, řízeně a predikovatelně.
+- **NEO_HEF** je konkrétní projekt, na kterém tým HAIFA pracuje. `HEF` znamená **Helios Fenix**.
+- Ve veřejných textech nezaměňuj HAIFA a NEO_HEF: HAIFA = tým / Helios AI Factory; NEO_HEF = projekt migrace Helios Fenix.
 - Pokud se chceš rychle zorientovat v tom, co tým HAIFA na projektu `NEO_HEF` opravdu dělá, začni v `C:\Users\User\Documents\NEO_HEF\docs\MARKDOWN_FILES.md`.
 - Tenhle soubor je hlavní rozcestník do projektové dokumentace a dává přesnou terminologii, scope, architekturu, implementační plány i hotové výsledky.
 - Pro veřejné články o `HAIFA` a `NEO_HEF` stavěj texty primárně na oficiálních artefaktech z `docs/`, ne jen na názvech commitů.
@@ -25,6 +28,7 @@
 - U týdenních článků počítej týdny podle života projektu, ne podle ISO kalendáře: `2026-W11 = Týden první`, `2026-W12 = Týden druhý` atd.
 - Každý týdenní článek má nahoře blok `Shrnutí pro netechnické čtenáře`.
 - Pak teprve následuje věcná část typu `Co se stalo`.
+- Článek `src/posts/neo-hef-tydenni-souhrn.md` (`Ohlédnutí do historie`) je jednorázový historický souhrn prvních týdnů projektu. Při přípravě nových týdenních článků ho neaktualizuj a nepřidávej do něj další týdny.
 - Ve veřejných článcích nezmiňuj interní techniku normalizace autorů ani podobné pomocné poznámky pro analytickou práci.
 - Když vytváříš nové public-facing články, chovej se spíš jako reportér vysvětlující význam dění než jako archivář commitů.
 
