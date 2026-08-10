@@ -22,6 +22,7 @@ jobs:
     env:
       REPO_NAME: ${{ github.event.repository.name }}
       OWNER_LOGIN: ${{ github.repository_owner }}
+      REPOSITORY: ${{ github.repository }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,7 +39,7 @@ jobs:
       - name: Resolve path prefix
         shell: bash
         run: |
-          if [[ "${REPO_NAME}" == "${OWNER_LOGIN}.github.io" ]]; then
+          if [[ "${REPOSITORY}" == "NEO-HEF/HAIFA-BLOG" || "${REPO_NAME}" == "${OWNER_LOGIN}.github.io" ]]; then
             echo "ELEVENTY_PATH_PREFIX=/" >> "$GITHUB_ENV"
           else
             echo "ELEVENTY_PATH_PREFIX=/${REPO_NAME}/" >> "$GITHUB_ENV"
