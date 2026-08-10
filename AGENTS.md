@@ -34,8 +34,9 @@
 
 ## Git remotes
 
-- Tento blog se udržuje synchronně na dvou remotech:
+- Tento blog se udržuje synchronně na dvou aktivních remotech:
   - `origin` = Azure DevOps
-  - `github` = GitHub
-- Pokud uživatel řekne jen `pushni to`, znamená to pushnout na oba remotes.
+  - `neo-hef` = GitHub (`NEO-HEF/HAIFA-BLOG`)
+- Starý osobní GitHub remote `janbkrejci/HAIFA_BLOG` už nepoužívej jako kopii blogu. Slouží jen jako přestěhovací stránka pro původní GitHub Pages adresu.
+- Pokud uživatel řekne jen `pushni to`, znamená to pushnout na `origin` i `neo-hef`.
 - Pokud má jít push jen na jeden remote, musí to být řečeno explicitně.
