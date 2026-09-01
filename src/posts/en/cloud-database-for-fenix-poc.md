@@ -28,7 +28,7 @@ Both legacy Fenix and the new modules from the NEO_HEF repository can connect to
 
 The technical verification was complemented by an assessment of the operating model, costs, and legal requirements. The basic economics look promising, and the path to registering the cloud offering in the Czech Digital and Information Agency's cloud catalogue is known.
 
-The HAIFA, Krypton, and AVA DevOps teams worked on the verification together with the product manager. Importantly, this was not merely a theoretical architecture proposal. Connectivity, compatibility, latency, and selected load and end-to-end scenarios were measured in practice.
+The HAIFA, Krypton, and AVA DevOps teams worked on the verification together with the product owner for public administration. Importantly, this was not merely a theoretical architecture proposal. Connectivity, compatibility, latency, and selected load and end-to-end scenarios were measured in practice.
 
 ## The Potential This Opens Up
 

@@ -27,7 +27,7 @@ Legacy Fenix i nové moduly z repozitáře NEO_HEF se dokážou připojit ke clo
 
 Technické ověření doplnilo posouzení provozního modelu, nákladů a legislativy. Základní ekonomika vychází slibně a cesta k zápisu cloudové nabídky do katalogu DIA je známá.
 
-Na ověření spolupracovaly týmy HAIFA, Krypton, AVA DevOps a produktový manažer. Důležité je, že nešlo jen o teoretický návrh architektury. Připojení, kompatibilita, latence i vybrané zátěžové a end-to-end scénáře se skutečně měřily.
+Na ověření spolupracovaly týmy HAIFA, Krypton, AVA DevOps a product owner pro veřejnou správu. Důležité je, že nešlo jen o teoretický návrh architektury. Připojení, kompatibilita, latence i vybrané zátěžové a end-to-end scénáře se skutečně měřily.
 
 ## Jaký potenciál se otevírá
 
