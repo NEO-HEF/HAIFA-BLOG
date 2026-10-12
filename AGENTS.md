@@ -31,6 +31,7 @@
 - Článek `src/posts/neo-hef-tydenni-souhrn.md` (`Ohlédnutí do historie`) je jednorázový historický souhrn prvních týdnů projektu. Při přípravě nových týdenních článků ho neaktualizuj a nepřidávej do něj další týdny.
 - Ve veřejných článcích nezmiňuj interní techniku normalizace autorů ani podobné pomocné poznámky pro analytickou práci.
 - Když vytváříš nové public-facing články, chovej se spíš jako reportér vysvětlující význam dění než jako archivář commitů.
+- U hotových modulů zmiňuj v dalších článcích jen významné změny. Běžné opravy, dílčí testy a implementační detaily do pravidelných týdenních souhrnů nezařazuj; soustřeď se na postup probíhajících migrací a důležité milníky.
 
 ## Git remotes
 
